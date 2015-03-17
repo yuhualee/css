@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>checkbox</title>
+<style>
+	*{padding:0;margin:0;}
+	html{font-size: 62.5%;}
+	body{font-size: 1.4rem;color: #333;background-color: #f1f1f1;}
+	img{width:auto\9;height:auto;width:100%;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;}
+	a{color: #333;text-decoration: none;}
+	.cf:before,.cf:after{
+	    content: "";
+	    display: table;
+	}
+	.cf:after{
+	    clear: both;
+	}
+	.cf{
+	    zoom:1;
+	}
+	section{margin-top: 15px;background-color: #fff;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+	.hd{height: 3.6rem;background-color: #eee;padding: 0 1rem;border-bottom: 1px solid #ccc;}
+	.hd h2{font-size: 1.8rem;line-height: 3.6rem;font-weight: normal;}
+	.navlink .item{float: left; width: 25%;text-align: center;padding: 1rem 0;overflow: hidden;}
+	.navlink .item a{display: block; background-color: #0097e0;color: #fff;display: inline-block;width: 4.8rem;height: 4.8rem;border-radius: 50%;text-align: center;line-height: 4.8rem;font-size: 1.6rem;background-size: cover;overflow: hidden;}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<section>
+			<header class="hd">
+				<h2>这是标题</h2>
+			</header>
+			<article class="bd navlink cf">
+				<span class="item">
+					<a href="###" style="background-image:url(http://img5.duitang.com/uploads/item/201406/26/20140626163054_knGYX.thumb.700_0.jpeg);"></a>
+				</span>
+				<span class="item">
+					<a href="###" style="background-image:url(http://img5.imgtn.bdimg.com/it/u=3715568809,1763274650&fm=21&gp=0.jpg);"></a>
+				</span>
+				<span class="item">
+					<a href="###">前端</a>
+				</span>
+				<span class="item">
+					<a href="###">php</a>
+				</span>
+				<span class="item">
+					<a href="###">html5</a>
+				</span>
+				<span class="item">
+					<a href="###">css3</a>
+				</span>
+				<span class="item">
+					<a href="###">gulp</a>
+				</span>
+				<span class="item">
+					<a href="###">seajs</a>
+				</span>
+			</article>
+		</section>
+		<section style="height:100px;overflow:hidden;">
+			<img src="http://img5.duitang.com/uploads/item/201406/26/20140626163054_knGYX.thumb.700_0.jpeg" alt="">
+		</section>
+	</div>
+<script>
+	;(function(){
+		var $html = document.querySelector('html');
+		var resize = function() {
+			var winW = window.innerWidth;
+			var scale = winW/320;
+			var fontSize = Math.round(scale * 62.5 * 100)/100;
+			console.log($html);
+			$html.style.fontSize = fontSize + "%";
+		}
+
+		resize();
+		window.onresize = function(){
+			resize();
+		}
+	})();
+</script>
+</body>
+</html>
