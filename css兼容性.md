@@ -4,6 +4,13 @@ Published: true
 Type: post  
 Excerpt: 
 
+
+
+**ie7强制转换成ie8**
+
+http://www.jb51.net/css/93221.html
+
+
   
 * **ie6下实现相对于窗口位置固定的元素实现无抖动效果：**
 

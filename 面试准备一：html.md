@@ -4,6 +4,13 @@ Published: true
 Type: post  
 Excerpt:   
 
+http://segmentfault.com/a/1190000002627927
+
+http://jingyan.baidu.com/article/546ae185643bc01148f28c4b.html
+
+http://www.jikexueyuan.com/path/web/
+
+
 # HTML
 ## <!DOCTYPE>定义和用法 
 

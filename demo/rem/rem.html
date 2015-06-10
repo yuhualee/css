@@ -73,6 +73,7 @@
 <script>
 	;(function(){
 		var $html = document.querySelector('html');
+		var h;
 		var resize = function() {
 			var winW = window.innerWidth;
 			var scale = winW/320;
@@ -83,7 +84,8 @@
 
 		resize();
 		window.onresize = function(){
-			resize();
+			clearTimeout(h);
+			h = setTimeout(resize,300);
 		}
 	})();
 </script>

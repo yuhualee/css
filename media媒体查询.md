@@ -71,7 +71,7 @@
 	```
 
 		 
+* 参考		 
 		 
-		 
-	
+	[iPads和iPhones的Media Queries](http://www.w3cplus.com/css3/css-media-queries-for-iPads-and-iPhones.html)
 		
