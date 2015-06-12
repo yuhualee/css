@@ -1,0 +1,1 @@
+[一行代码解决各种IE兼容问题,IE6,IE7,IE8,IE9,IE10](http://www.frontopen.com/2552.html)
