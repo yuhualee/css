@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter</title>
+	<style>
+	*,:before,:after{
+		margin: 0;
+		padding: 0;
+		position: relative;
+		-webkit-box-sizing:border-box;
+		   -moz-box-sizing:border-box;
+		   		box-sizing:border-box;
+	}
+	ul,li{
+		list-style: none;
+	}
+	ul{
+		overflow: hidden;
+	}
+	li{
+		float: left;
+		display: inline;
+		width: 200px;
+		margin: 10px 0 0 10px;
+	}
+	.pic{
+		width: 200px;
+	}
+	.text{
+		text-align: center;
+		height: 20px;
+		overflow: hidden;
+		line-height: 20px;
+	}
+	.grayscale{
+		-webkit-filter:grayscale(1);
+			    filter:grayscale(1);
+	}
+	.sepia{
+		-webkit-filter:sepia(1);
+				filter:sepia(1);
+	}
+	.saturate{
+		-webkit-filter:saturate(3);
+				filter:saturate(3);
+	}
+	.hue-rotate{
+		-webkit-filter:hue-rotate(90deg);
+				filter:hue-rotate(90deg);
+	}
+	.invert{
+		-webkit-filter:invert(1);
+	}
+	.opacity{
+		-webkit-filter:opacity(.5);
+	}
+	.brightness{
+		-webkit-filter:brightness(2);
+	}
+	.contrast{
+		-webkit-filter:contrast(2);
+	}
+	.blur{
+		-webkit-filter:blur(2px);
+	}
+	.drop-shadow{
+		-webkit-filter:drop-shadow(5px 5px 5px #ccc);
+	}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<img src="pic.jpg" alt="" class="pic">
+			<p class="text">normal</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic grayscale">
+			<p class="text">grayscale</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic sepia">
+			<p class="text">sepia</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic saturate">
+			<p class="text">saturate</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic hue-rotate">
+			<p class="text">hue-rotate</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic invert">
+			<p class="text">invert</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic opacity">
+			<p class="text">opacity</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic brightness">
+			<p class="text">brightness</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic contrast">
+			<p class="text">contrast</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic blur">
+			<p class="text">blur</p>
+		</li>
+		<li>
+			<img src="pic.jpg" alt="" class="pic drop-shadow">
+			<p class="text">drop-shadow</p>
+		</li>
+	</ul>
+</body>
+</html>

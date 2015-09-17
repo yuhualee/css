@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animate</title>
+	<link rel="stylesheet" href="animate.css">
+</head>
+<body>
+	<section class="container">
+		<header class="site-header">
+			<div class="wrap">
+				<div id="animationSandbox">
+					<h1 class="site-title">Animate.css</h1>
+				</div>
+				<p class="subhead">Just-add-water CSS animations</p>
+			</div>
+		</header>
+		<main class="site-content" role="content">
+			<div class="wrap">
+				<form action="">
+					<select name="" id="" class="input input-dropdown js-animations">
+						<optgroup label="Attention Seekers">
+							<option value="flash">flash</option>
+							<option value="bounce">bounce</option>
+							<option value="pulse">pulse</option>
+							<option value="rubberBand">rubberBand</option>
+							<option value="shake">shake</option>
+							<option value="swing">swing</option>
+						</optgroup>
+					</select>
+					<button class="button js-triggerAnimation">Animate it</button>
+				</form>
+				<hr>
+			</div>
+		</main>
+	</section>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+	;(function(){
+		function addAni(x){
+			$('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+				$(this).removeClass();
+			});
+		};
+		$('.js-triggerAnimation').click(function(e){
+			e.preventDefault();
+			var anim = $('.js-animations').val();
+			addAni(anim); 
+		});
+		$('.js-animations').change(function(){
+			var anim = $(this).val();
+			addAni(anim);
+		});
+	})();
+</script>
+ <script>
+//   function testAnim(x) {
+//     $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+//       $(this).removeClass();
+//     });
+//   };
+
+//   $(document).ready(function(){
+//     $('.js--triggerAnimation').click(function(e){
+//       e.preventDefault();
+//       var anim = $('.js--animations').val();
+//       testAnim(anim);
+//     });
+
+//     $('.js--animations').change(function(){
+//       var anim = $(this).val();
+//       testAnim(anim);
+//     });
+//   });
+
+// </script>
+</body>
+</html>

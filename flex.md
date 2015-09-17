@@ -49,20 +49,58 @@
 		
 	* flex items
 	
-		* flex
+		* flex: none | <flex-grow> | <flex-shrink> | <flex-basis>
 	
 			```
 			flex:1;
 			```
 			
+		* flex-grow: 用数值来扩展比率，不允许负值
+		
+			```
+			flex-grow: <number>; 
+			```
+			
+			* html
+			
+				```
+				<ul class="flex-c">
+					<li>这是第1个</li>
+					<li>这是第2个</li>
+					<li>这是第3个</li>
+				</ul>
+				```
+			
+			* css
+			
+				```
+				.flex-c{
+					display: flex;
+					width: 666px;
+					height: 50px;
+					border: 1px solid #f90;
+					margin: 50px;
+				}
+				.flex-c li{
+					border: 1px solid #ccc;
+					margin: 5px;
+					padding: 5px;
+				}
+				.flex-c li:nth-child(1){width: 200px;}
+				.flex-c li:nth-child(2){flex-grow:1;width: 50px;}
+				.flex-c li:nth-child(3){flex-grow:3;width: 50px;}
+				```
+				
+			> **解释：**
+			
+			> 1. flex-grow：的默认值是0，如果没有显示定义该属性，是不会拥有分配剩余空间权利的。如果定义了flex-grow会分配**剩余**空间的比例。
+			
+			> * 剩余空间： `(666 - 200 - (2(border) - 10(padding) - 10(margin)) * 3) = 300`
+			
+			> * flex-grow: 分为4份，每份 75，第一个200px，第二个（75 * 1）+ 50 = 125px，第三个 (75 * 3) + 50 = 275px 
+		 
 		
 		
-		* margin，padding, border 
-	
-			* margin：相邻不合并
-			* padding, border: flex分配比例里面不包含
-
-
 * Demo
 
 	* html
@@ -204,24 +242,7 @@
 	
 
 
----
 
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
-https://css-tricks.com/almanac/properties/f/flex-flow/
-
-http://css.doyoe.com/
-
-https://css-tricks.com/almanac/properties/f/flex/
-
-http://www.zhangxinxu.com/wordpress/2010/12/css-box-flex%E5%B1%9E%E6%80%A7%EF%BC%8C%E7%84%B6%E5%90%8E%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/
-
-http://www.w3school.com.cn/cssref/pr_box-flex.asp
-
-https://bocoup.com/weblog/dive-into-flexbox/
-
-
-参考： [flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 
 

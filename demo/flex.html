@@ -9,7 +9,7 @@
 		margin: 0;
 	}
 	*,*:after,*:before{
-		box-sizing:border-box;
+		/*box-sizing:border-box;*/
 	}
 	ul,li{
 		list-style: none;
@@ -98,9 +98,29 @@
   margin-top: auto;     /* Auto top margin pushes button to bottom */
 }
 
+	.flex-c{
+		display: flex;
+		width: 666px;
+		height: 50px;
+		border: 1px solid #f90;
+		margin: 50px;
+	}
+	.flex-c li{
+		border: 1px solid #ccc;
+		margin: 5px;
+		padding: 5px;
+	}
+	.flex-c li:nth-child(1){width: 200px;}
+	.flex-c li:nth-child(2){flex-grow:1;width: 50px;}
+	.flex-c li:nth-child(3){flex-grow:3;width: 50px;}
 	</style>
 </head>
 <body>
+	<ul class="flex-c">
+		<li>这是第1个</li>
+		<li>这是第2个</li>
+		<li>这是第3个</li>
+	</ul>
 	<ul class="flex-mul">
 		<li class="flex-item">普通item</li>
 		<li class="flex-item">普通item</li>
@@ -121,18 +141,5 @@
 		</div>
 	</div>
 	<section id="deals">
-  <section class="sale-item">
-    <h1>Computer Starter Kit</h1>
-    <p>This is the best computer money can buy, if you don’t have much money.
-    <ul>
-      <li>Computer
-      <li>Monitor
-      <li>Keyboard
-      <li>Mouse
-    </ul>
-    <img src="images/computer.jpg"
-         alt="You get: a white computer with matching peripherals.">
-    <button>BUY NOW</button>
-  </section>
 </body>
 </html>
