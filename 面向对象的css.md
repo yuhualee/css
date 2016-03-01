@@ -1,3 +1,9 @@
+[CSS样式分离之再分离](http://www.zhangxinxu.com/wordpress/2010/07/css%E6%A0%B7%E5%BC%8F%E5%88%86%E7%A6%BB%E4%B9%8B%E5%86%8D%E5%88%86%E7%A6%BB/)
+
+[css样式合并与模块化](http://www.zhangxinxu.com/wordpress/2010/07/css%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%90%88%E5%B9%B6%E4%B8%8E%E6%A8%A1%E5%9D%97%E5%8C%96/)
+
+
+
 ## 面向对象的css
 
 * #### oo css的作用和注意事项
