@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iconFont</title>
+	<style>
+	@font-face{
+		font-family: "imooc";
+		src:url("fonts/icomoon.eot");  /*ie9 标签浏览器*/
+		src:url("fonts/icomoon.eot?#iefix") format("embedded-opentype")
+		, url("fonts/icomoon.svg") format("svg")
+		, url("fonts/icomoon.ttf") format("truetype")
+		, url("fonts/icomoon.woff") format("woff");
+	}
+	*{padding: 0;margin: 0;}
+	html,body{background-color: #f1f1f1;}
+	.wrap{background-color: #f8f8f8;border-top: 1px solid #ccc;border-left: 1px solid #ccc;width: 244px;height: 244px;margin:100px auto;}
+
+	.wrap span{float:left;display: inline;width: 80px;height: 80px;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;
+		font-family: "imooc" !important;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 80px;
+		text-align: center;
+		color: #999;
+		-webkit-font-smoothing: antialiased;   /*icon font字体图标在chrome抗锯齿*/
+		-moz-osx-font-smoothing:grayscale;  /*icon font字体图标在火狐*/
+	}
+	.icon-1:before{content:"\e600";color: #f90;}
+	.icon-2:before{content:"\e601";color: #09f;font-size: 20px;}
+	.icon-3:before{content:"\e602";}
+	.icon-4:before{content:"\e603";}
+	.icon-5:before{content:"\e604";}
+	.icon-6:before{content:"\e605";}
+	.icon-7:before{content:"\e606";}
+	.icon-8:before{content:"\e607";}
+	.icon-9:before{content:"\e600";}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<span class="icon-1"></span>
+		<span class="icon-2"></span>
+		<span class="icon-3"></span>
+		<span class="icon-4"></span>
+		<span class="icon-5"></span>
+		<span class="icon-6"></span>
+		<span class="icon-7"></span>
+		<span class="icon-8"></span>
+		<span class="icon-9"></span>
+	</div>
+</body>
+</html>

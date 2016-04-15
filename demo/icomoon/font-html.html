@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iconFont</title>
+	<style>
+	@font-face{
+		font-family: "imooc";
+		src:url("fonts/icomoon.eot");  /*ie9 标签浏览器*/
+		src:url("fonts/icomoon.eot?#iefix") format("embedded-opentype")
+		, url("fonts/icomoon.svg") format("svg")
+		, url("fonts/icomoon.ttf") format("truetype")
+		, url("fonts/icomoon.woff") format("woff");
+	}
+	*{padding: 0;margin: 0;}
+	html,body{background-color: #f1f1f1;}
+	.wrap{background-color: #f8f8f8;border-top: 1px solid #ccc;border-left: 1px solid #ccc;width: 244px;height: 244px;margin:100px auto;}
+	.wrap .item{float:left;display: inline;width: 80px;height: 80px;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;
+		font-family: "imooc";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 80px;
+		text-align: center;
+		color: #999;
+		-webkit-font-smoothing: antialiased;   /*icon font字体图标在chrome抗锯齿*/
+		-moz-osx-font-smoothing:grayscale;  /*icon font字体图标在火狐*/
+	}
+	.item:hover{
+		color: #f00;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<span class="item" style="color:#f60;">&#xe600</span>
+		<span class="item" style="color:#6f0;">&#xe601</span>
+		<span class="item" style="color:#0097e0;">&#xe602</span>
+		<span class="item" style="">&#xe604</span>
+		<span class="item" style="color:#60f;">&#xe605</span>
+		<span class="item" style="color:#6f0;font-size:18px;">&#xe606</span>
+		<span class="item" style="font-size:20px;">&#xe607</span>
+		<span class="item" style="font-size:30px;">&#xe608</span>
+	</div>
+</body>
+</html>

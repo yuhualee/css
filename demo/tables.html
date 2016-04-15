@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=320, user-scalable=no,target-densityDpi=device-dpi">
+	<title>table</title>
+	<style>
+	body {font-family: arial;}
+    h2{font-size: 18px;margin-top: 20px;}
+    .blue{color: #00f;}
+    .red{color: #f00;}
+    table {border: 1px solid #ccc;width: 100%;margin:0;padding:0;border-collapse: collapse;border-spacing: 0;}
+
+    table th, table td {padding: 10px;text-align: center;}
+
+    table th {text-transform: uppercase;font-size: 14px;letter-spacing: 1px;}
+
+    .simple tr{ border: 1px solid #ddd;}
+
+    @media screen and (max-width: 600px) {
+        
+    }
+
+
+    .unseen tr{ border: 1px solid #ddd;}
+    .scroll th {background-color: #0097e0;color: #fff;}
+    @media screen and (max-width: 800px){
+        .unseen th:nth-child(2),
+        .unseen td:nth-child(2){display: none;}
+
+        /* scroll */
+        .scroll .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+        .scroll * html .cf { zoom: 1; }
+        .scroll *:first-child+html .cf { zoom: 1; }
+        .scroll { display: block; position: relative;}
+        .scroll thead { display: block; float: left; }
+        .scroll tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+        /*.scroll thead tr { display: block; }*/
+        .scroll th { display: block; text-align: right;background-color: #0097e0;line-height: 20px; }
+        .scroll tbody tr { display: inline-block; vertical-align: top; }
+        .scroll td { display: block; min-height: 1.25em; text-align: left; }
+        /* sort out borders */
+     
+        .scroll th { border-bottom: 0; border-left: 0; }
+        .scroll td { border-left: 0; border-right: 0; border-bottom: 0; }
+        .scroll tbody tr { border-left: 1px solid #babcbf; }
+        .scroll th:last-child,
+        .scroll td:last-child { border-bottom: 1px solid #babcbf; }
+    }
+    @media screen and (max-width: 600px){
+        .unseen th:nth-child(2),
+        .unseen td:nth-child(2),
+        .unseen th:nth-child(5),
+        .unseen td:nth-child(5),
+        .unseen th:nth-child(7),
+        .unseen td:nth-child(7){display: none;}
+
+
+        .simple {border: 0;}
+        .simple thead {display: none;}
+        .simple tr {margin-bottom: 10px;display: block;}
+        .simple tr:after {content: "";display: table;clear: both;}
+        .simple tr:before {display: block;}
+        .simple td {box-sizing: border-box;display: block;float: left;clear: left;width: 100%;text-align: right;font-size: 13px;border-bottom: 1px dotted #ccc;}
+        .simple td:last-child {border-bottom: 0;}
+        .simple td:before {content: attr(data-label);float: left;text-transform: uppercase;font-weight: bold;}
+    }
+	</style>
+</head>
+<body>
+    <!-- unseen_table -->
+    <h2>隐藏多余的列</h2>
+    <table class="unseen">
+      <thead>
+        <tr>
+            <th>Header1</th>
+            <th>Header2</th>
+            <th>Header3</th>
+            <th>Header4</th>
+            <th>Header5</th>
+            <th>Header6</th>
+            <th>Header7</th>
+            <th>Header8</th>
+        </tr>
+      </thead>  
+      <tbody>
+         <tr>
+             <td>content1</td>
+             <td class="blue">&lt;800消失</td>
+             <td>content3</td>
+             <td>content4</td>
+             <td class="red">&lt;600消失</td>
+             <td>content6</td>
+             <td class="red">&lt;600消失</td>
+             <td>content8</td>
+         </tr> 
+         <tr>
+             <td>content1</td>
+             <td class="blue">&lt;800消失</td>
+             <td>content3</td>
+             <td>content4</td>
+             <td class="red">&lt;600消失</td>
+             <td>content6</td>
+             <td class="red">&lt;600消失</td>
+             <td>content8</td>
+         </tr> 
+         <tr>
+             <td>content1</td>
+             <td class="blue">&lt;800消失</td>
+             <td>content3</td>
+             <td>content4</td>
+             <td class="red">&lt;600消失</td>
+             <td>content6</td>
+             <td class="red">&lt;600消失</td>
+             <td>content8</td>
+         </tr> 
+      </tbody>
+    </table>
+    <div class="text">
+        <p>思路：不需要的隐藏</p>
+    </div>
+    <!-- 卷轴 -->
+    <h2>卷轴</h2>
+    <table class="scroll">
+        <thead class="cf">
+            <tr>
+                <th>Header1</th>
+                <th>Header2</th>
+                <th>Header3</th>
+                <th>Header4</th>
+                <th>Header5</th>
+                <th>Header6</th>
+                <th>Header7</th>
+                <th>Header8</th>
+            </tr>
+        </thead>  
+        <tbody>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr>
+             <tr>
+                 <td>content1</td>
+                 <td>content2</td>
+                 <td>content3</td>
+                 <td>content4</td>
+                 <td>content5</td>
+                 <td>content6</td>
+                 <td>content7</td>
+                 <td>content8</td>
+             </tr> 
+        </tbody>
+    </table>
+    <div class="text">
+        <p>思路：改变table以及里面的tbody,tr,td等默认样式display</p>
+    </div>
+    <!--  -->
+    <h2>隐藏多余的列</h2>
+	<table class="simple">
+        <thead>
+            <tr>
+                <th>Header1</th>
+                <th>Header2</th>
+                <th>Header3</th>
+                <th>Header4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Header1">content1</td>
+                <td data-label="Header2">content2</td>
+                <td data-label="Header3">content3</td>
+                <td data-label="Header4">content4</td>
+            </tr>
+            <tr>
+                <td data-label="Header1">content1</td>
+                <td data-label="Header2">content2</td>
+                <td data-label="Header3">content3</td>
+                <td data-label="Header4">content4</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text">
+        <p>思路：html5支持以data-*添加自定义属性，css可以通过attr(data-*)来读取</p>
+        <p>在html里面利用data-label="Header1"来获取它的值，显示在::after或::before上面</p>
+    </div>
+</body>
+</html>
