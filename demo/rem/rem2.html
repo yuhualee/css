@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size:40px;">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
@@ -9,8 +9,8 @@
 	<title>checkbox</title>
 <style>
 	*{padding:0;margin:0;}
-	*,*:after,*:before{box-sizing:border-box;}
-	body{font-size: 24px;color: #333;background-color: #f1f1f1;}
+	html{font-size: 62.5%;}
+	body{font-size: 1.4rem;color: #333;background-color: #f1f1f1;}
 	img{width:auto\9;height:auto;width:100%;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;}
 	a{color: #333;text-decoration: none;}
 	.cf:before,.cf:after{
@@ -23,37 +23,15 @@
 	.cf{
 	    zoom:1;
 	}
-	section{background-color: #fff;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;margin-bottom: 10px;}
-	.hd{height: 1.3rem;background-color: #eee;padding: 0.3rem;border-bottom: 1px solid #ccc;}
-	.hd h2{font-size: .5rem;line-height: .7rem;font-weight: normal;}
-	.navlink{padding: 0.4rem 0.4rem 0 0;}
-	.navlink .item{float: left; width: 2rem;text-align: center;margin-left: 0.4rem;margin-bottom: 0.4rem;overflow: hidden;}
-	.navlink .item a{display: block; background-color: #0097e0;color: #fff;display: inline-block;width: 2rem;height: 2rem;border-radius: 50%;text-align: center;line-height: 4.8rem;font-size: 1.6rem;background-image: url(rem_bg.jpg); background-size: 400%;overflow: hidden;text-indent: -9999px;}
-	.navlink .item p{font-size: 14px;line-height: .6rem;}
+	section{margin-top: 15px;background-color: #fff;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+	.hd{height: 3.6rem;background-color: #eee;padding: 0 1rem;border-bottom: 1px solid #ccc;}
+	.hd h2{font-size: 1.8rem;line-height: 3.6rem;font-weight: normal;}
+	.navlink .item{float: left; width: 25%;text-align: center;padding: 1rem 0;overflow: hidden;}
+	.navlink .item a{display: block; background-color: #0097e0;color: #fff;display: inline-block;width: 4.8rem;height: 4.8rem;border-radius: 50%;text-align: center;line-height: 4.8rem;font-size: 1.6rem;background-image: url(rem_bg.jpg); background-size: 400%;overflow: hidden;text-indent: -9999px;}
 	.navlink .item:nth-of-type(3n+1) a{background-position:0 0; }
 	.navlink .item:nth-of-type(3n+2) a{background-position:-100% 0; }
 	.navlink .item:nth-of-type(3n+3) a{background-position:-200% 0; }
-	.wrap{width: 10rem;margin: 0 auto;}
-	.img{height: 3rem;overflow: hidden;}
-	.img img{height: 100%;}
-	.flex{
-		display: -webkit-box;
- 		display: -moz-box;
- 		display: -ms-flexbox;
- 		display: -webkit-flex;
- 		display: flex;
- 	}
-	.flex-cell{
-		flex:1;
-		text-align: center;
-		padding: 10px 0;
-		font-size: .5rem;
-	}
-	p{
-		font-size: .4rem;
-		line-height: 1.5;
-		padding:10px 0 10px 2em;
-	}
+	/*.wrap{width: 41.4rem;margin: 0 auto;}*/
 </style>
 </head>
 <body>
@@ -65,49 +43,32 @@
 			<article class="bd navlink cf">
 				<span class="item">
 					<a href="###"></a>
-					<p>test</p>
 				</span>
 				<span class="item">
 					<a href="###"></a>
-					<p>test</p>
 				</span>
 				<span class="item">
 					<a href="###">前端</a>
-					<p>test</p>
 				</span>
 				<span class="item">
 					<a href="###">php</a>
-					<p>test</p>
 				</span>
 				<span class="item">
 					<a href="###">html5</a>
-					<p>test</p>
 				</span>
 				<span class="item">
 					<a href="###">css3</a>
-					<p>test</p>
 				</span>
 				<span class="item">
 					<a href="###">gulp</a>
-					<p>test</p>
 				</span>
 				<span class="item">
 					<a href="###">seajs</a>
-					<p>test</p>
 				</span>
 			</article>
 		</section>
-		<section class="img">
+		<section style="height:100px;overflow:hidden;">
 			<img src="http://img5.duitang.com/uploads/item/201406/26/20140626163054_knGYX.thumb.700_0.jpeg" alt="">
-		</section>
-		<section class="flex">
-			<div class="flex-cell">1</div>
-			<div class="flex-cell">2</div>
-			<div class="flex-cell">3</div>
-			<div class="flex-cell">4</div>
-		</section>
-		<section>
-			<p>rem:自适应布局,通过js改变html的font-size大小来控制页面及其内容！</p>
 		</section>
 	</div>
 <script>
@@ -116,20 +77,16 @@
 		var h;
 		var resize = function() {
 			var winW = window.innerWidth;
-			var scale = winW/10;
-			// var fontSize = scale + 'px';
+			var scale = winW/320;
+			var fontSize = Math.round(scale * 62.5 * 100)/100;
 			console.log($html);
-			if(scale >= 54){
-				scale = 54;
-			}
-			$html.style.fontSize = scale + "px";
-			
+			$html.style.fontSize = fontSize + "%";
 		}
 
 		resize();
 		window.onresize = function(){
 			clearTimeout(h);
-			h = setTimeout(resize,200);
+			h = setTimeout(resize,300);
 		}
 	})();
 </script>
